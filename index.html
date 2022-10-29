@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
@@ -16,44 +17,47 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 
   <article class="card">
 
-    <header class="card-header">
+    <img src="images/illustration-hero.svg" alt="Girl listening to music with headphones and having fun" class="card-image">
 
-      <div class="card-image">
-        
-      </div>
 
-      <h1>
-        Order Summary
-      </h1>
+    <h1>
+      Order Summary
+    </h1>
 
-      <p class="card-desc">
-        You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
-      </p>
+    <p class="card-desc">
+      You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like!
+    </p>
 
-    </header>
 
     <div class="order-plan">
-      <img src="" alt="">
+
+      <div class="left">
+      <svg aria-hidden="true">
+        <use xlink:href="images/icon-music.svg#icon-music"></use>
+      </svg>
 
       <div class="plan-detail">
         <div>Annual Plan</div>
         <div>$59.99/year</div>
       </div>
+      </div>
 
-      <a href="">Change</a>
+      <a href="#">Change</a>
 
-    </div>  
-    
-    <button>Proceed to Payment</button>
-    
-    <a href="">Cancel Order</a>
+    </div>
+
+    <button class="payment">Proceed to Payment</button>
+
+    <a href="#" class="cancel-order">Cancel Order</a>
 
   </article>
-  
+
 
 </body>
+
 </html>

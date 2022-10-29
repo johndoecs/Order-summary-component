@@ -9,9 +9,9 @@
 
     --ff-primary: 'Red Hat Display', sans-serif;
 
-    --fw-light: 300;
-    --fw-regular: 400;
-    --fw-semi-bold: 600;
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
 
     --fs-300: 0.8125rem; /*13*/
     --fs-400: 0.875rem; /*14*/
@@ -19,7 +19,7 @@
     --fs-600: 1rem;
     --fs-700: 1.125rem;
     --fs-800: 1.4rem;
-    --fs-900: 3.5rem;
+    --fs-900: 1.8rem;
 
     --size-100: 0.25rem;
     --size-200: 0.5rem;
@@ -37,4 +37,121 @@ body {
     display: grid;
     place-content: center;
     font-family: var(--ff-primary);
+    background: top no-repeat url("images/pattern-background-mobile.svg") var(--clr-primary-100);
+    background-size: contain;
+    
+}
+
+@media (min-width: 42em) {
+    body {
+        background: repeat-x url("images/pattern-background-desktop.svg") var(--clr-primary-100);
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 27rem;
+    margin-inline: 5rem;
+    border-radius: var(--size-500);
+    background-color: var(--clr-neutral-100);
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3em;
+    box-shadow: 0px 25px 17px -3px #c8d3ef
+}
+
+.card-image {
+    border-start-start-radius: var(--size-500);
+    border-start-end-radius: var(--size-500);
+    margin-bottom: 2rem;
+}
+
+.card h1 {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-black);
+    margin-bottom: 1.1rem;
+ }
+
+ .card-desc {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-500);
+    max-width: 30ch;
+    text-align: center;
+    margin-bottom: 2rem;
+ }
+
+ .order-plan {
+    display: flex;
+    background-color: hsla(225, 100%, 94%, .3);
+    padding: 1.5em 2em;
+    border-radius: .8em;
+    gap: 5rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+ }
+
+ .order-plan .left {
+    display: flex;
+    gap: 1.3rem;
+ }
+
+ .order-plan svg {
+    aspect-ratio: 1;
+    width: var(--size-700);
+ }
+
+ .plan-detail div:first-child {
+    font-weight: var(--fw-bold);
+ }
+
+ .plan-detail div:last-child {
+    color: var(--clr-neutral-500);
+ }
+
+ .order-plan a {
+    color: var(--clr-primary-900);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-400);
+ }
+
+ .order-plan a:hover {
+    text-decoration: none;
+    opacity: .7;
+ }
+ 
+button.payment {
+    background-color: var(--clr-primary-900);
+    box-shadow: 0px 15px 17px -3px hsl(245deg 75% 52% / 20%);
+    color: var(--clr-neutral-100);
+    cursor: pointer;
+    padding: .4em 4em;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-500);
+    border: none;
+    border-radius: .8em;
+    margin-bottom: 2rem;
+}
+
+button.payment:hover {
+    opacity: .6;
+}
+
+@media (min-width: 32em) {
+    button.payment {
+        padding: .8em 7em;
+    }
+}
+
+.cancel-order {
+    color: var(--clr-neutral-500);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    font-size: var(--fs-500);
+}
+
+.cancel-order:hover {
+    color: var(--clr-neutral-900);
 }
